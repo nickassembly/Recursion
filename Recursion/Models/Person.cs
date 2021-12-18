@@ -11,5 +11,6 @@ namespace Recursion.Models
         public Person? NextInLine { get; set; }
     }
 
-    // Can an object have a property with an instance of itself?
+    
+
 }
