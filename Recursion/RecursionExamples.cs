@@ -18,5 +18,18 @@ namespace Recursion
 
             return 1 + GetMyPositionInLine(person.NextInLine);
         }
+
+        public string ReverseString(string input)
+        {
+            // what is the base case? When should the algorithm stop?
+            // what is the smallest unit between each invocation
+
+            if (input.Equals(""))
+            {
+                return "";
+            }
+
+            return ReverseString(input.Substring(0)) + input.Substring(0, 1);
+        }
     }
 }
