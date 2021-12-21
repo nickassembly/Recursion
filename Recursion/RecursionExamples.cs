@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Recursion
 {
-    public class RecursionExamples
+    public static class RecursionExamples
     {
-        public int GetMyPositionInLine(Person person)
+        public static int GetMyPositionInLine(Person person)
         {
             if (person.NextInLine == null)
             {
@@ -19,7 +19,7 @@ namespace Recursion
             return 1 + GetMyPositionInLine(person.NextInLine);
         }
 
-        public string ReverseString(string input)
+        public static string ReverseString(string input)
         {
             // what is the base case? When should the algorithm stop?
             // what is the smallest unit between each invocation
@@ -31,5 +31,8 @@ namespace Recursion
 
             return ReverseString(input.Substring(0)) + input.Substring(0, 1);
         }
+
+
+
     }
 }
