@@ -32,6 +32,13 @@ namespace Recursion
             return ReverseString(input.Substring(0)) + input.Substring(0, 1);
         }
 
+        public static string FindBinary(int decimalInput, string result)
+        {
+            if (decimalInput == 0) return result;
+
+            result = decimalInput % 2 + result;
+            return FindBinary(decimalInput / 2, result);
+        }
 
 
     }
