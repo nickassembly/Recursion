@@ -5,3 +5,6 @@ Console.WriteLine("Hello, World!");
 
 var binary233 = RecursionExamples.FindBinary(233, "");
 Console.WriteLine($"Binary of 233: {binary233}");
+
+var sumOfNaturalNumbers = RecursionExamples.recursiveSummation(55);
+Console.WriteLine($"Sum of natural numbers up to 55: {sumOfNaturalNumbers}");

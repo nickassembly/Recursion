@@ -1,9 +1,4 @@
 ﻿using Recursion.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Recursion
 {
@@ -38,6 +33,13 @@ namespace Recursion
 
             result = decimalInput % 2 + result;
             return FindBinary(decimalInput / 2, result);
+        }
+
+        public static int recursiveSummation(int inputNumber)
+        {
+            if (inputNumber <= 1) return inputNumber;
+
+            return inputNumber + recursiveSummation(inputNumber - 1);
         }
 
 
