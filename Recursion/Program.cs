@@ -8,3 +8,6 @@ Console.WriteLine($"Binary of 233: {binary233}");
 
 var sumOfNaturalNumbers = RecursionExamples.recursiveSummation(55);
 Console.WriteLine($"Sum of natural numbers up to 55: {sumOfNaturalNumbers}");
+
+var fib = RecursionExamples.Fibonacci(5);
+Console.WriteLine($"Fibonacci Sequence: {fib}");

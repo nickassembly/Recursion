@@ -42,6 +42,29 @@ namespace Recursion
             return inputNumber + recursiveSummation(inputNumber - 1);
         }
 
+        // Not optimized
+        public static long Fibonacci(long n)
+        {
+            if ((n == 0) || (n == 1))
+            {
+                Console.Write($"{n} ");
+                return n;
+            }
+            else
+            {
+                Console.Write($"{n} ");
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
+        }
+
+        // Merge Sort
+        public static void MergeSort(int[] data, int start, int end)
+        {
+
+        }
+
+
+
 
     }
 }
