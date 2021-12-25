@@ -58,8 +58,57 @@ namespace Recursion
         }
 
         // Merge Sort
-        public static void MergeSort(int[] data, int start, int end)
+        public static int[] MergeSort(int[] data, int start, int end)
         {
+            if (start < end)
+            {
+                int mid = (start + end) / 2;
+                MergeSort(data, start, mid); // left half of array
+                MergeSort(data, mid + 1, end); // right half of array
+                Merge(data, start, mid, end);
+            }
+
+            return data;
+        }
+
+        private static void Merge(int[] data, int start, int mid, int end)
+        {
+            // build a temporary array to avoid modifying the original contents
+            int[] temp = new int[end - start + 1];
+
+            int i = start, j = mid + 1, k = 0;
+
+            // While both sub arrys have values, try to merge them in sorted order
+            while (i <= mid && j <= end)
+            {
+                if (data[i] <= data[j])
+                {
+                    temp[k++] = data[i++];
+                }
+                else
+                {
+                    temp[k++] = data[j++];
+                }
+            }
+
+            // Add the rest of the values from left sub array into the result
+            while (i <= mid)
+            {
+                temp[k] = data[i];
+                k++; i++;
+            }
+
+            // Add the rest of the values from the right sub-array
+            while (j <= end)
+            {
+                temp[k] = data[j];
+                k++; j++;
+            }
+
+            for(i = start; i <= end; i++)
+            {
+                data[i] = temp[i - start];
+            }
 
         }
 

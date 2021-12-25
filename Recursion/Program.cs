@@ -11,3 +11,11 @@ Console.WriteLine($"Sum of natural numbers up to 55: {sumOfNaturalNumbers}");
 
 var fib = RecursionExamples.Fibonacci(5);
 Console.WriteLine($"Fibonacci Sequence: {fib}");
+
+int[] data = new int[] { -5, 20, 10, -99, 3, 2, 0 };
+int[] sortedData = RecursionExamples.MergeSort(data, 0, data.Length - 1);
+
+Console.WriteLine("Sorted Array");
+Array.ForEach(sortedData, Console.Write);
+
+
