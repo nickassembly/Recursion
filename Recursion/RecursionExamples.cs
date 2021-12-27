@@ -105,13 +105,13 @@ namespace Recursion
                 k++; j++;
             }
 
-            for(i = start; i <= end; i++)
+            for (i = start; i <= end; i++)
             {
                 data[i] = temp[i - start];
             }
         }
 
-         
+  
 
 
     }
