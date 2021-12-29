@@ -18,4 +18,7 @@ int[] sortedData = RecursionExamples.MergeSort(data, 0, data.Length - 1);
 Console.WriteLine("Sorted Array");
 Array.ForEach(sortedData, Console.Write);
 
+var fibonacci = DynamicExamples.Fib(4);
+Console.WriteLine($"Fib number revisted: {fibonacci}");
+
 
